@@ -2,20 +2,54 @@ import java.util.ArrayList;
 
 public class ClasePruebaGit {
 
+	/***
+	 * atributo ejemplo
+	 */
 	private String ejemplo;
 	private int idEjemplo;
 	private long ejemplo2;
 	private ArrayList<String> ListaEjeplos;
+	private boolean falsoNumero;
 
+	/***
+	 * COnstructor vacio
+	 */
 	public ClasePruebaGit() {
 
 	}
 
+	/***
+	 * Consturctor con los siguientes parametros
+	 * 
+	 * @param ejemplo
+	 * @param idEjemplo
+	 * @param ejemplo2
+	 */
 	public ClasePruebaGit(String ejemplo, int idEjemplo, long ejemplo2) {
 		ListaEjeplos = new ArrayList<>();
 		this.ejemplo = ejemplo;
 		this.idEjemplo = idEjemplo;
 		this.ejemplo2 = ejemplo2;
+	}
+	
+	
+	/***
+	 * 
+	 * constructor con los parametros completos
+	 * 
+	 * @param ejemplo
+	 * @param idEjemplo
+	 * @param ejemplo2
+	 * @param listaEjeplos
+	 * @param falsoNumero
+	 */
+	public ClasePruebaGit(String ejemplo, int idEjemplo, long ejemplo2, ArrayList<String> listaEjeplos,
+			boolean falsoNumero) {
+		this.ejemplo = ejemplo;
+		this.idEjemplo = idEjemplo;
+		this.ejemplo2 = ejemplo2;
+		ListaEjeplos = listaEjeplos;
+		this.falsoNumero = falsoNumero;
 	}
 
 	public String getEjemplo() {
