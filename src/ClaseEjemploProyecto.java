@@ -55,7 +55,7 @@ public class ClaseEjemploProyecto {
 		}
 		return c;
 	}
-
+					
 	/***
 	 * 
 	 * @throws IOException
