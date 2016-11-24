@@ -18,8 +18,9 @@ public class ClaseEjemploProyecto {
 	 */
 	private static String face = "23456789TJQKA";
 	int j = 10;
+	
 	/***
-	 * 
+	 * uvuvuy
 	 */
 	private static String suit = "CDSH";
 
