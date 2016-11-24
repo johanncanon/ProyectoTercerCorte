@@ -9,13 +9,15 @@ import java.util.StringTokenizer;
 public class ClaseEjemploProyecto {
 
 	/***
-	 * 
+	 * Primer cambio al servidor
 	 */
 	private static BufferedReader stdin;
+	
 	/***
 	 * 
 	 */
 	private static String face = "23456789TJQKA";
+	int j = 10;
 	/***
 	 * 
 	 */
