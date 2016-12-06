@@ -20,23 +20,25 @@ public class ClaseEjemploProyecto {
 	 * 
 	 */
 	private static String suit = "CDSH";
+	
+	
 
 	/***
 	 * 
 	 * @param args
 	 * @throws Exception
 	 */
-	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
-
-		Reader rdr = new InputStreamReader(System.in);
-		stdin = new BufferedReader(rdr);
-		int n = Integer.parseInt(stdin.readLine());
-
-		for (int i = 0; i < n; i++)
-			(new ClaseEjemploProyecto()).solve();
-
-	}
+//	public static void main(String[] args) throws Exception {
+//		// TODO Auto-generated method stub
+//
+//		Reader rdr = new InputStreamReader(System.in);
+//		stdin = new BufferedReader(rdr);
+//		int n = Integer.parseInt(stdin.readLine());
+//
+//		for (int i = 0; i < n; i++)
+//			(new ClaseEjemploProyecto()).solve();
+//
+//	}
 
 	/***
 	 * 
