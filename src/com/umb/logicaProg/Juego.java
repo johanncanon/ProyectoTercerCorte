@@ -6,8 +6,21 @@ public class Juego {
 	 * 
 	 */
 	private Habitacion habitacionModelo;
+	
+	/**
+	 * 
+	 */
 	private Habitacion[ ] habitacoinArray;
 	
+	/**
+	 * 
+	 */
+	private Integer respuesta;
+	
+	/**
+	 * 
+	 */
+	private int contador=5;
 
 	/**
 	 * 
@@ -20,7 +33,7 @@ public class Juego {
 	 * 
 	 * @param habitacion
 	 */
-	public Juego(Habitacion habitacion) {
+	public Juego(Habitacion habitacion) {		
 		habitacionModelo = habitacion;
 		habitacoinArray = new Habitacion [5];
 	} 
@@ -32,13 +45,25 @@ public class Juego {
 	 */
 	
 	/**
-	 * METODO QUE SEGUN LOS PARAMETROS ENVIADOS, MUESTRA EL NUMERO DE LA HABITACION EN LA QUE SE ENCUENTRA, SI INGESO EL NUMERO DE HABITACOIN
-	 * ENTONCES LE MOSTRARÀ LA NACIONALIDAD, SI INGRESOLA NACIONALIDAD ENTONCES MOSTRARA
+	 * METODO QUE MUESTRA EN NUM DE LA HABITACION SEGUN EL OBJETO HABITACION ENVIADO COMO PARAMETRO
 	 * @param hab
 	 */
-	public void igual(Habitacion hab){
+	public String igual(Habitacion hab){
 		
+		for (int i = 0; i < habitacoinArray.length; i++) {
+			
+			if (habitacoinArray[i].getColorPuerta() == hab.getColorPuerta() && 
+					habitacoinArray[i].getNacionalidad() == hab.getNacionalidad()) {
+				respuesta = habitacoinArray[i].getNumeroPuerta(); 
+			}
+		}
+		
+		contador --;
+		
+		return "El numero de la habitacion es: " + respuesta + " . Te quedan " + contador + " turnos.";
 	}
+	
+	
 	
 	
 

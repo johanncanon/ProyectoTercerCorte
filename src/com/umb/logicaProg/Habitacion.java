@@ -1,6 +1,12 @@
 package com.umb.logicaProg;
 
 public class Habitacion {
+
+	/**
+	 * 
+	 */
+	private int numeroPuerta;
+
 	/**
 	 * 
 	 */
@@ -42,12 +48,22 @@ public class Habitacion {
 	 * @param lenguajeProg
 	 * @param sistO
 	 */
-	public Habitacion(String colorPuerta, String nombre, String nacionalidad, String lenguajeProg, String sistO) {
+	public Habitacion(int numeroPuerta, String colorPuerta, String nombre, String nacionalidad, String lenguajeProg,
+			String sistO) {
+		this.numeroPuerta = numeroPuerta;
 		this.colorPuerta = colorPuerta;
 		this.nombre = nombre;
 		this.nacionalidad = nacionalidad;
 		this.lenguajeProg = lenguajeProg;
 		this.sistO = sistO;
+	}
+
+	public int getNumeroPuerta() {
+		return numeroPuerta;
+	}
+
+	public void setNumeroPuerta(int numeroPuerta) {
+		this.numeroPuerta = numeroPuerta;
 	}
 
 	public String getColorPuerta() {
@@ -93,13 +109,17 @@ public class Habitacion {
 	/**
 	 * METODOS LISTOS PARA DEFINIR
 	 */
+
 	
+
+
+
 	
-	
+
 	@Override
 	public String toString() {
-		return "Habitacion [colorPuerta=" + colorPuerta + ", nombre=" + nombre + ", nacionalidad=" + nacionalidad
-				+ ", lenguajeProg=" + lenguajeProg + ", sistO=" + sistO + "]";
+		return "Habitacion [numeroPuerta=" + numeroPuerta + ", colorPuerta=" + colorPuerta + ", nombre=" + nombre
+				+ ", nacionalidad=" + nacionalidad + ", lenguajeProg=" + lenguajeProg + ", sistO=" + sistO + "]";
 	}
 
 	@Override
@@ -110,6 +130,7 @@ public class Habitacion {
 		result = prime * result + ((lenguajeProg == null) ? 0 : lenguajeProg.hashCode());
 		result = prime * result + ((nacionalidad == null) ? 0 : nacionalidad.hashCode());
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+		result = prime * result + numeroPuerta;
 		result = prime * result + ((sistO == null) ? 0 : sistO.hashCode());
 		return result;
 	}
@@ -143,6 +164,8 @@ public class Habitacion {
 				return false;
 		} else if (!nombre.equals(other.nombre))
 			return false;
+		if (numeroPuerta != other.numeroPuerta)
+			return false;
 		if (sistO == null) {
 			if (other.sistO != null)
 				return false;
@@ -150,7 +173,5 @@ public class Habitacion {
 			return false;
 		return true;
 	}
-	
-	
 
 }
